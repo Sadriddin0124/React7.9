@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "0b10",
+      "name": "Galaxy A34",
+      "code": "dWJgOXzgnTPOpxIquWAjC",
+      "brand": "Samsung",
+      "model": "Smartphone",
+      "price": "260",
+      "desc": "Very Comfortable"
+    },
+    {
+      "name": "12 Ultra",
+      "code": "U6qzff13uBoz1VB1h4lVo",
+      "brand": "Red Mi",
+      "model": "Smartphone",
+      "price": "500",
+      "desc": "Very Expensive",
+      "id": "d9ad"
+    }
+  ],
+  "brands": [
+    {
+      "id": "1",
+      "title": "Samsung"
+    },
+    {
+      "id": "2",
+      "title": "Apple"
+    },
+    {
+      "id": "3",
+      "title": "Red Mi"
+    },
+    {
+      "id": "4",
+      "title": "VIVO"
+    },
+    {
+      "id": "fbee",
+      "title": "LG"
+    },
+    {
+      "id": "16f6",
+      "title": "Honor"
+    }
+  ],
+  "models": [
+    {
+      "id": "1",
+      "title": "Smartphone"
+    },
+    {
+      "id": "2",
+      "title": "Laptop"
+    },
+    {
+      "id": "3",
+      "title": "TV"
+    },
+    {
+      "id": "4",
+      "title": "Pods"
+    },
+    {
+      "id": "d43a",
+      "title": "Charger"
+    }
+  ]
+}
