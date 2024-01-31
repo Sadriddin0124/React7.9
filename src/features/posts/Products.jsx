@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDeleteProductsMutation, useGetProductsQuery } from './ApiSlice'
+import { useDeleteProductsMutation, useGetProductsQuery } from './ProductsSlice'
 import "./Products.scss"
 import { Link } from 'react-router-dom'
 import ProductsModal from '../../components/ProductsModal'

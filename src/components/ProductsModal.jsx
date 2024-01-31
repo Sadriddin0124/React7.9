@@ -1,12 +1,9 @@
 import React from "react";
-import { Modal, ModalBody } from "reactstrap";
-import {
-    useAddProductsMutation,
-  useGetBrandsQuery,
-  useGetModelsQuery,
-  useUpdateProductsMutation,
-} from "../features/posts/ApiSlice";
+import { Modal, ModalBody } from "reactstrap"; 
 import { nanoid } from "@reduxjs/toolkit";
+import { useGetBrandsQuery } from "../features/brands/BrandsSlice";
+import { useGetModelsQuery } from "../features/models/ModelsSlice";
+import { useAddProductsMutation, useUpdateProductsMutation } from "../features/posts/ProductsSlice";
 
 const ProductsModal = ({ open, toggle, edit }) => {
   const { data: brands } = useGetBrandsQuery();

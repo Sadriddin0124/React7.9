@@ -3,7 +3,7 @@ import SideBar from "./features/sidebar/SideBar";
 import { Route, Routes } from "react-router-dom";
 import Products from "./features/posts/Products";
 import SingleProduct from "./singlePage/SingleProduct";
-import Brands from "./components/Brands";
+import Brands from "./features/brands/Brands";
 import Models from "./features/models/Models";
 
 const App = () => {

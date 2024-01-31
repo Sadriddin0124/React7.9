@@ -1,9 +1,6 @@
 import React from "react";
 import { Modal, ModalBody } from "reactstrap";
-import {
-  useAddModelsMutation,
-  useUpdateModelsMutation,
-} from "../posts/ApiSlice";
+import { useAddModelsMutation, useUpdateModelsMutation } from "./ModelsSlice";
 
 const ModelsModal = ({ open, toggle, editItem }) => {
   const [addModel] = useAddModelsMutation();

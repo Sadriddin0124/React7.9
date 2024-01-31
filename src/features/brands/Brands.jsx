@@ -1,28 +1,32 @@
 import React, { useState } from "react";
-import { useDeleteModelsMutation, useGetModelsQuery } from "./ModelsSlice";
-import ModelsModal from "./ModelsModal";
+import { useDeleteBrandsMutation, useGetBrandsQuery } from "./BrandsSlice";
+import BrandsModal from "../../components/BrandsModal";
 
-const Models = () => {
-  const { data: models } = useGetModelsQuery();
-  const [deleteModel] = useDeleteModelsMutation();
-  const [modelsModal, setModelsModal] = useState(false);
-  const [editItem, setEditItem] = useState("");
-  const closeModel = () => {
-    setModelsModal(false);
-    setEditItem("");
+const Brands = () => {
+  const { data: brands } = useGetBrandsQuery();
+  const [brandsModal, setBrandsModal] = useState(false);
+  const [brandItem, setBrandItem] = useState("");
+  const [deleteBrand] = useDeleteBrandsMutation();
+  const closeBrand = () => {
+    setBrandsModal(false);
+    setBrandItem("");
   };
-  const editModel = (item) => {
-    setEditItem(item);
-    setModelsModal(true);
+  const editBrand = (item) => {
+    setBrandItem(item);
+    setBrandsModal(true);
   };
   return (
     <div className="container">
-      <button className="btn btn-success mt-5" onClick={() => setModelsModal(true)}>
+      <BrandsModal
+        open={brandsModal}
+        toggle={closeBrand}
+        editBrand={brandItem}
+      />
+      <button className="btn btn-success mt-5" onClick={() => setBrandsModal(true)}>
         Add
       </button>
-      <ModelsModal open={modelsModal} toggle={closeModel} editItem={editItem} />
       <div className="row">
-        {models?.map((item, index) => {
+        {brands?.map((item, index) => {
           return (
             <div className="col-3 mt-5" key={index}>
               <div className="card">
@@ -31,19 +35,18 @@ const Models = () => {
                   <div className="d-flex justify-content-between">
                     <button
                       className="btn btn-info w-50"
-                      onClick={() => editModel(item)}
+                      onClick={() => editBrand(item)}
                     >
                       edit
                     </button>
                     <button
                       className="btn btn-danger w-50"
-                      onClick={() => deleteModel(item.id)}
+                      onClick={() => deleteBrand(item.id)}
                     >
                       delete
                     </button>
                   </div>
                 </div>
-                <div />
               </div>
             </div>
           );
@@ -53,4 +56,4 @@ const Models = () => {
   );
 };
 
-export default Models;
+export default Brands;

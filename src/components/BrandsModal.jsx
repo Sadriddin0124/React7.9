@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, ModalBody } from "reactstrap";
-import { useAddBrandsMutation, useUpdateBrandsMutation } from "../features/posts/ApiSlice";
+import { useAddBrandsMutation, useUpdateBrandsMutation } from "../features/brands/BrandsSlice";
 
 const BrandsModal = ({ open, toggle, editBrand }) => {
   const [addBrand] = useAddBrandsMutation();

@@ -1,6 +1,6 @@
 import React from "react";
-import { useGetProductsQuery } from "../features/posts/ApiSlice";
 import "./SingleProduct.scss";
+import { useGetProductsQuery } from "../features/posts/ProductsSlice";
 const SingleProduct = () => {
   const { data: singleProduct } = useGetProductsQuery();
   const url = window.location.href.split("/")[4];
